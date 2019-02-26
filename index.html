@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="weight" value="" placeholder="nhập số cân nặng (kg)">
+<input type="number" id="height" placeholder="nhập số chiều cao (m)">
+<input type="button" onclick="hien_thi()" value="ket qua">
+<script>
+function hien_thi() {
+    let weight=parseFloat(document.getElementById("weight").value)
+    let height=parseFloat(document.getElementById("height").value)
+    let bmi = weight/(height*height);
+    if (bmi<18)
+        document.write("thiếu cân");
+    else if (bmi<25.0)
+        document.write("bình thường");
+    else if (bmi<30.0)
+        document.write("thừa cân");
+    else
+        document.write("mập");
+}
+</script>
+
+
+</body>
+</html>
